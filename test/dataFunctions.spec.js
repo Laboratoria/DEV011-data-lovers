@@ -1,3 +1,4 @@
+//Hacer pruebas unitarias de las funciones implementadas en el archivo dataFunctions.js
 import { example, anotherExample } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
 
