@@ -1,0 +1,16 @@
+
+#reset-button {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    left: 45%;
+    }
+  
+  #reset-button:hover {
+    background-color: #5a83ac;
+
