@@ -1,8 +1,11 @@
-import { example } from './dataFunctions.js';
+//import { example } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, renderItems, data);
+import data from './data/ghibli/ghibli.js';
+const btn = document.getElementById("button-filter");
+
+function callingrenderItems(){
+  return renderItems(data)
+}
+btn.addEventListener('click', callingrenderItems);
