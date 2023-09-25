@@ -16,9 +16,13 @@
   </header>
   <body>
     <main>
-      <h2></h2>
-      <div class="barra-navegación">
-        <button>Filtro</button>
+      <h2> </h2>
+      <div class="barra-navegación"> 
+      <select data-testid="select-filter" name="relase_date">
+        <option value="asc"> Ordenar fecha ascendente </option>
+        <option value="desc"> Ordenar fecha descendente </option>
+      </select>
+       <button id="ordenarNombre-btn"> Ordenar por Título </button>
       </div>
       <div id="root" class="lista-imagenes">
         <ul></ul>
