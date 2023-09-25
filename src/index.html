@@ -6,13 +6,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <header>
-    <h1> STUDIO GHIBLI</h1>
+    <div class="logo">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/de/thumb/2/2e/Studio_Ghibli_Logo.svg/2560px-Studio_Ghibli_Logo.svg.png"
+        alt="logo ghibli"
+        class="imagen"
+      />
+    </div>
   </header>
   <body>
     <main>
       <h2> </h2>
       <div class="barra-navegación"> 
-       <button> Filtro </button>
+      <select data-testid="select-filter" name="relase_date">
+        <option value="asc"> Ordenar fecha ascendente </option>
+        <option value="desc"> Ordenar fecha descendente </option>
+      </select>
+       <button id="ordenarNombre-btn"> Ordenar por Título </button>
       </div>
       <div id="root" class="lista-imagenes"> 
        <ul> </ul>

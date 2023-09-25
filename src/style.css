@@ -1,26 +1,43 @@
 html{
  background-color: #58BFA6;
 }
+.logo {
+  display: flex;
+  justify-content: center;
+  background-color: #e0c886;
+  border: 10px solid #24363b;
+  align-items: center;
+  margin : 25px;
+}
+
+.imagen {
+  align-self: center;
+  flex-shrink: 1;
+  max-width: 30%;
+}
 
 .barra-navegación{
 background-color: #2C6255;
 padding-block: 10px;
+margin : 25px;
 }
 
 .lista-imagenes{
-    column-count: 4;
-    margin-left: 2%;
+    grid-auto-rows: auto;
+    display: table-row;
 }
 
 .card {
     border: 1px solid #747474;
     background-color: #C2D1D1;
+    padding: 10px;
     border-radius: 15px;
     margin: 10px;
     width: 250px;
     height: 400px; /* Altura fija para todas las tarjetas */
     display: inline-block;
     text-align: center;
+    margin : 25px;
 }
 .card img {
     border-top-right-radius: 15px;
@@ -31,7 +48,7 @@ padding-block: 10px;
 }
   .card h2 {
     margin: 10px 0;
-    font-size: 115%;
+    font-size: 98%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #131414;
         
