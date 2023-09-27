@@ -1,35 +1,56 @@
 //Código que tenga que ver con mostrar los datos en la pantalla. Interacción del DOM. Llamas a las funciones de dataFunctions.js
 
-import { example } from "./dataFunctions.js";
+import { sortData , filterData } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/ghibli/ghibli.js";
 
-
 //Mostar películas desordenadas
-let peliculas = data.films
-renderItems(peliculas)
+let peliculas = data.films;
+renderItems(peliculas);
 
 //Función para ordenar y mostar las películas
-      
-const btnOrden = document.querySelector("select");
-btnOrden.addEventListener("change", function() {
-    const selectedValue = btnOrden.value;
-    console.log (selectedValue);
 
-  if (selectedValue === "asc") {
-    peliculas = data.films.sort((a,b)=>new Date(a.release_date) - new Date(b.release_date));
-   }
-    else if (selectedValue === "desc") {
-    peliculas = data.films.sort((a,b)=>new Date(b.release_date) - new Date(a.release_date));
-    }
+const btnOrden = document.querySelector("select[name='release_date']");
+btnOrden.addEventListener("change", function () {
+  const selectedValueS = btnOrden.value;
 
-renderItems(peliculas);
+  const sortedFILMS= sortData(
+    peliculas,
+    "release_date",
+    selectedValueS
+  );
+
+  renderItems(sortedFILMS);
 });
 
+//Función para filtar y mostrar las películas
+const btnFiltrar = document.querySelector("select[name='director']");
+btnFiltrar.addEventListener("change", function () {
+  const selectedValueF = btnFiltrar.value;
+
+  const filteredFILMS = filterData (
+    peliculas,
+    "director",
+    selectedValueF
+  )
+
+  renderItems(filteredFILMS);
+});
+
+//Función para limpiar valores
+const btnClear = document.querySelector("button");
+btnClear.addEventListener("click", function () {
+  let filmsOrigin = data.films;
+  document.querySelector("select[name='release_date']").value = "inicio";
+  document.querySelector("select[name='director']").value = "inicio";
+  
+  renderItems(filmsOrigin);
+});
+
+console.log(renderItems, data);
 
 
 
 
 
 
-console.log(example, renderItems, data);
