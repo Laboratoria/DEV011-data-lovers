@@ -16,20 +16,35 @@
   </header>
   <body>
     <main>
-      <h2> </h2>
-      <div class="barra-navegación"> 
-      <select data-testid="select-filter" name="relase_date" id="sortby">
-        <option selected="true" disabled="disabled">--Sort by Year--</option>
-        <option value="asc"> Ordenar fecha ascendente </option>
-        <option value="desc"> Ordenar fecha descendente </option>
-      </select>
-       <button id="ordenarNombre-btn"> Ordenar por Título </button>
-      </div>
+      <h2></h2>
+      <section class="barra-navegación">
+        <select data-testid="select-sort" name="release_date">
+          <option value= "inicio" selected="true" disabled="disabled">--Sort by Year--</option>
+          <option value="asc">Ordenar fecha ascendente</option>
+          <option value="desc">Ordenar fecha descendente</option>
+        </select>
+        <select data-testid="select-filter" name="director">
+          <option value = "inicio" selected="true" disabled="disabled">
+            --Filter by Director-
+          </option>
+          <option value="Hayao">Hayao Miyazaki</option>
+          <option value="Isao">Isao Takahata</option>
+          <option value="Yoshifumi">Yoshifumi Kondō</option>
+          <option value="Hiroyuki">Hiroyuki Morita</option>
+          <option value="Gorō">Gorō Miyazaki</option>
+          <option value="Hiromasa">Hiromasa Yonebayashi</option>
+        </select>
+        <button name="clearBtn"> 
+          Clear
+        </button>
+      </section>
       <div id="root" class="lista-imagenes">
         <ul></ul>
       </div>
     </main>
-    <footer class= firma> "2023 | Desarrollado por: Carolina Navarro e Itzel Quintana"</footer>
+    <footer class="firma">
+      "2023 | Desarrollado por: Carolina Navarro e Itzel Quintana"
+    </footer>
 
     <script src="main.js" type="module"></script>
   </body>
