@@ -1,12 +1,12 @@
 //debe tener todas las funciones que utilizara para renderizar los elementos dinámicamente.
 //Función obligatoria:renderItems(data): esta función recibe el arreglo de data para renderizar los elementos de cada item, y debería volver un elemento DOM o un string de HTML.
 
-export const renderItems = (peliculas) => {
+export const renderItems = (data) => {
     const container = document.getElementById("root");
     container.innerHTML = " ";
   
     // Iterar sobre los datos y generar las tarjetas
-    peliculas.forEach((item) => {
+    data.forEach((item) => {
       // Crear un elemento li para cada tarjeta
       const card = document.createElement("li");
       card.classList.add("card");
@@ -26,7 +26,7 @@ export const renderItems = (peliculas) => {
   
       // Añadir la imagen, título y año al elemento tarjeta
       card.appendChild(image);
-      card.appendChild(title);
+      card.appendChild(title);     
       card.appendChild(year);
   
       // Añadir la tarjeta al contenedor
