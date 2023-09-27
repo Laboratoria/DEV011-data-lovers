@@ -19,15 +19,24 @@ export const renderItems = (peliculas) => {
       // Crear un elemento título y establecer su contenido
       const title = document.createElement("h2");
       title.textContent = item.title;
+      title.textContent = '"'+ item.title + '",' ;
+
+         //crear elemento de director
+         const director = document.createElement ("h3");
+         director.textContent = item.director;
   
       // Crear un elemento año de publicación y establecer su contenido
-      const year = document.createElement("h3");
+      const year = document.createElement("h4");
       year.textContent = item.release_date;
+
+   
   
       // Añadir la imagen, título y año al elemento tarjeta
       card.appendChild(image);
       card.appendChild(title);
+      card.appendChild(director);
       card.appendChild(year);
+      
   
       // Añadir la tarjeta al contenedor
       container.appendChild(card);
