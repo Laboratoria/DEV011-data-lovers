@@ -19,12 +19,14 @@
       <h2></h2>
       <section class="barra-navegación">
         <select data-testid="select-sort" name="release_date">
-          <option value= "inicio" selected="true" disabled="disabled">--Sort by Year--</option>
+          <option value="inicio" selected="true" disabled="disabled">
+            --Sort by Year--
+          </option>
           <option value="asc">Ordenar fecha ascendente</option>
           <option value="desc">Ordenar fecha descendente</option>
         </select>
         <select data-testid="select-filter" name="director">
-          <option value = "inicio" selected="true" disabled="disabled">
+          <option value="inicio" selected="true" disabled="disabled">
             --Filter by Director-
           </option>
           <option value="Hayao">Hayao Miyazaki</option>
@@ -34,9 +36,7 @@
           <option value="Gorō">Gorō Miyazaki</option>
           <option value="Hiromasa">Hiromasa Yonebayashi</option>
         </select>
-        <button name="clearBtn"> 
-          Clear
-        </button>
+        <button name="clearBtn">Clear</button>
       </section>
       <div id="root" class="lista-imagenes">
         <ul></ul>
