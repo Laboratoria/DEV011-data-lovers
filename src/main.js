@@ -5,8 +5,10 @@ import { renderItems } from "./view.js";
 import data from "./data/ghibli/ghibli.js";
 
 //Mostar películas desordenadas
+const root = document.getElementById("root")
 const peliculas = data.films;
-renderItems(peliculas);
+root.appendChild(renderItems(peliculas));
+
 
 //Función para ordenar y mostar las películas
 
@@ -15,8 +17,8 @@ btnOrden.addEventListener("change", function () {
   const selectedValueS = btnOrden.value;
 
   const sortedFILMS = sortData(peliculas, "release_date", selectedValueS);
-
-  renderItems(sortedFILMS);
+  root.innerHTML="";
+  root.appendChild(renderItems(sortedFILMS));
 });
 
 //Función para filtar y mostrar las películas
@@ -25,8 +27,8 @@ btnFiltrar.addEventListener("change", function () {
   const selectedValueF = btnFiltrar.value;
 
   const filteredFILMS = filterData(peliculas, "director", selectedValueF);
-
-  renderItems(filteredFILMS);
+  root.innerHTML="";
+  root.appendChild(renderItems(filteredFILMS));
 });
 
 //Función para limpiar valores
@@ -35,8 +37,8 @@ btnClear.addEventListener("click", function () {
   const filmsOrigin = data.films;
   document.querySelector("select[name='release_date']").value = "inicio";
   document.querySelector("select[name='director']").value = "inicio";
-
-  renderItems(filmsOrigin);
+  root.innerHTML="";
+  root.appendChild(renderItems(filmsOrigin));
 });
 
 console.log(renderItems, data);

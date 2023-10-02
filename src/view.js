@@ -2,7 +2,7 @@
 //Función obligatoria:renderItems(data): esta función recibe el arreglo de data para renderizar los elementos de cada item, y debería volver un elemento DOM o un string de HTML.
 
 export const renderItems = (data) => {
-  const container = document.getElementById("root");
+  const container = document.createElement("ul");
   container.innerHTML = " ";
 
   // Iterar sobre los datos y generar las tarjetas
@@ -38,4 +38,5 @@ export const renderItems = (data) => {
     // Añadir la tarjeta al contenedor
     container.appendChild(card);
   });
+  return container;
 };
