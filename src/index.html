@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <header>
-    <div class="logo">
+    <h1></h1>
+    <div>
       <img
         src="https://upload.wikimedia.org/wikipedia/de/thumb/2/2e/Studio_Ghibli_Logo.svg/2560px-Studio_Ghibli_Logo.svg.png"
         alt="logo ghibli"
@@ -19,30 +20,30 @@
       <h2></h2>
       <section class="barra-navegación">
         <select data-testid="select-sort" name="release_date">
-          <option value= "inicio" selected="true" disabled="disabled">--Sort by Year--</option>
+          <option value="inicio" selected="true" disabled="disabled">
+            --Sort by Year--
+          </option>
           <option value="asc">Ordenar fecha ascendente</option>
           <option value="desc">Ordenar fecha descendente</option>
         </select>
         <select data-testid="select-filter" name="director">
-          <option value = "inicio" selected="true" disabled="disabled">
+          <option value="inicio" selected="true" disabled="disabled">
             --Filter by Director-
           </option>
-          <option value="Hayao">Hayao Miyazaki</option>
-          <option value="Isao">Isao Takahata</option>
-          <option value="Yoshifumi">Yoshifumi Kondō</option>
-          <option value="Hiroyuki">Hiroyuki Morita</option>
-          <option value="Gorō">Gorō Miyazaki</option>
-          <option value="Hiromasa">Hiromasa Yonebayashi</option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Isao Takahata">Isao Takahata</option>
+          <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+          <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+          <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+          <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
         </select>
-        <button name="clearBtn"> 
-          Clear
-        </button>
+        <button name="clearBtn">Clear</button>
       </section>
       <div id="root" class="lista-imagenes">
-        <ul></ul>
+      
       </div>
     </main>
-    <footer class="firma">
+    <footer>
       "2023 | Desarrollado por: Carolina Navarro e Itzel Quintana"
     </footer>
 

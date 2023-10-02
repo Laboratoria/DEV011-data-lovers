@@ -1,13 +1,13 @@
-html{
- background-color: #4d9e8a;
+html {
+  background-color: #4d9e8a;
 }
-.logo {
+header {
   display: flex;
   justify-content: center;
   background-color: #e0c886;
   border: 10px solid #24363b;
   align-items: center;
-  margin : 25px;
+  margin: 25px;
 }
 
 .imagen {
@@ -16,29 +16,34 @@ html{
   max-width: 30%;
 }
 
-.barra-navegación{
-background-color:#24363b;
-padding-block: 10px;
-margin : 50px;
+.barra-navegación {
+  background-color: #24363b;
+  padding-block: 10px;
+  margin: 50px;
 }
 
-.lista-imagenes{
-    grid-auto-rows: auto;
-    display: table-row;
+.lista-imagenes {
+  grid-auto-rows: auto;
+  display: table-row;
+}
+
+ul {
+ display: flex;
 }
 
 .card {
-    border: 1px solid #747474;
-    background-color: #C2D1D1;
-    padding: 10px;
-    border-radius: 15px;
-    margin: 10px;
-    width: 250px;
-    height: 400px; /* Altura fija para todas las tarjetas */
-    display: inline-block;
-    text-align: center;
-    margin : 25px;
+  border: 1px solid #747474;
+  background-color: #c2d1d1;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+  width: 250px;
+  height: 400px; /* Altura fija para todas las tarjetas */
+  display: inline-block;
+  text-align: center;
+  margin: 25px;
 }
+
 .card img {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
@@ -46,44 +51,37 @@ margin : 50px;
   height: 75%; /* Altura fija para todas las imágenes */
   object-fit: cover; /* Ajusta la imagen para llenar la caja */
 }
-  .card h2 {
-    margin: 10px 0;
-    font-size: 98%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #131414;
-    
-        
-  }
 
-  .card h3 { 
-    margin: 10px 0;
-    font-size: 90%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #695e40;
+.card h2 {
+  margin: 10px 0;
+  font-size: 98%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #131414;
+}
 
+.card h3 {
+  margin: 10px 0;
+  font-size: 90%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #695e40;
+}
 
-  }  
-  
 .card h4 {
-  margin : 5px 0;
+  margin: 5px 0;
   font-size: 100%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 
-}  
-
- .firma {
-  display : flex;
-  color:rgb(183, 204, 223);
+footer {
+  display: flex;
+  color: rgb(183, 204, 223);
   justify-content: center;
   margin-top: 1%;
   padding-block: 10px;
   background-color: #24363b;
-  margin : 25px;
-
-   }
-   .sortby {
-    padding-block: 30px;
+  margin: 25px;
 }
-  
 
-  
+select{
+  padding-block: 15px;
+}
