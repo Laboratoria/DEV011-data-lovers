@@ -1,5 +1,5 @@
 //Hacer pruebas unitarias de las funciones implementadas en el archivo dataFunctions.js
-import { filterData, computeStats } from "../src/dataFunctions.js";
+import { computeStats, filterData } from "../src/dataFunctions.js";
 import { data as fakeData } from "./data.js";
 
 describe("filterData", () => {
@@ -9,10 +9,9 @@ describe("filterData", () => {
   });
 });
 
-//prueba Estadística
 describe("computeStats", () => {
-  it("Calcular el % de películas de cada director", () => {
-    const dataStats = computeStats(director, fakeData);
-    expect(dataStats).toEqual(director, fakeData);
+  it("Calcular el % de películas de cada direcor", () => {
+    const dataStats = computeStats("Hayao Miyazaki", fakeData, fakeData);
+    expect(dataStats).toEqual(100);
   });
 });
