@@ -33,8 +33,8 @@ btnFiltrar.addEventListener("change", function () {
   const directorBuscado = selectedValueF;
   const frecuenciaDirector = computeStats(selectedValueF, filteredFILMS);
 
-  const elementoP = document.createElement("p");
-  elementoP.textContent = `Los films dirigidos por ${directorBuscado} representan el ${frecuenciaDirector} % del trabajo total del estudio`
+  const elementoP = document.createElement("h5");
+  elementoP.textContent = `🤍 Los films dirigidos por ${directorBuscado} representan el ${frecuenciaDirector} % del trabajo total del estudio 🤍`
   root.insertBefore(elementoP,tarjetas);
 
   console.log(`Los films dirigidos por "${directorBuscado}" representan el ${frecuenciaDirector} % del trabajo total del estudio`);
