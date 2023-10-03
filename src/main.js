@@ -5,10 +5,9 @@ import { renderItems } from "./view.js";
 import data from "./data/ghibli/ghibli.js";
 
 //Mostar películas desordenadas
-const root = document.getElementById("root")
+const root = document.getElementById("root");
 const peliculas = data.films;
 root.appendChild(renderItems(peliculas));
-
 
 //Función para ordenar y mostar las películas
 
@@ -17,7 +16,7 @@ btnOrden.addEventListener("change", function () {
   const selectedValueS = btnOrden.value;
 
   const sortedFILMS = sortData(peliculas, "release_date", selectedValueS);
-  root.innerHTML="";
+  root.innerHTML = "";
   root.appendChild(renderItems(sortedFILMS));
 });
 
@@ -27,19 +26,19 @@ btnFiltrar.addEventListener("change", function () {
   const selectedValueF = btnFiltrar.value;
 
   const filteredFILMS = filterData(peliculas, "director", selectedValueF);
-  root.innerHTML="";
+  root.innerHTML = "";
   const tarjetas = root.appendChild(renderItems(filteredFILMS));
-//Función estadística
+  //Función estadística
   const directorBuscado = selectedValueF;
   const frecuenciaDirector = computeStats(selectedValueF, filteredFILMS);
 
   const elementoP = document.createElement("p");
-  elementoP.textContent = `Los films dirigidos por ${directorBuscado} representan el ${frecuenciaDirector} % del trabajo total del estudio`
-  root.insertBefore(elementoP,tarjetas);
+  elementoP.textContent = `Los films dirigidos por ${directorBuscado} representan el ${frecuenciaDirector} % del trabajo total del estudio`;
+  root.insertBefore(elementoP, tarjetas);
 
-  console.log(`Los films dirigidos por "${directorBuscado}" representan el ${frecuenciaDirector} % del trabajo total del estudio`);
-
-
+  console.log(
+    `Los films dirigidos por "${directorBuscado}" representan el ${frecuenciaDirector} % del trabajo total del estudio`
+  );
 });
 
 //Función para limpiar valores
@@ -48,12 +47,8 @@ btnClear.addEventListener("click", function () {
   const filmsOrigin = data.films;
   document.querySelector("select[name='release_date']").value = "inicio";
   document.querySelector("select[name='director']").value = "inicio";
-  root.innerHTML="";
+  root.innerHTML = "";
   root.appendChild(renderItems(filmsOrigin));
 });
 
 console.log(renderItems, data);
-
-
-
-
