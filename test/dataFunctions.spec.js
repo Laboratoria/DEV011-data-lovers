@@ -1,18 +1,19 @@
-import { example, anotherExample } from '../src/dataFunctions.js';
+import { filterData, sortData } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
 
 console.log(fakeData);
 
-describe('example', () => {
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+describe('filterData', () => {
+
+  it('returns `filterData`', () => {
+    expect(filterData()).toBe('filterData');
   });
 });
 
-describe('anotherExample', () => {
+describe('sortData', () => {
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `sortData`', () => {
+    expect(sortData()).toBe('OMG');
   });
 });
