@@ -30,7 +30,7 @@ btnFiltrar.addEventListener("change", function () {
   const tarjetas = root.appendChild(renderItems(filteredFILMS));
   //Función estadística
   const directorBuscado = selectedValueF;
-  const frecuenciaDirector = computeStats(selectedValueF, filteredFILMS);
+  const frecuenciaDirector = computeStats(selectedValueF, filteredFILMS, peliculas);
 
   const elementoP = document.createElement("h5");
   elementoP.textContent = `Los films dirigidos por ${directorBuscado} representan el ${frecuenciaDirector} % del trabajo total del estudio `
