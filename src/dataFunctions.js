@@ -30,16 +30,17 @@ export const filterData = (data, filterBy, value) => {
 
 //computeStats(data)
 
-export const computeStats= (director, data) => {
+export const computeStats = (director, data, arrayTotal) => {
   const frecuencia = data.reduce((contador, pelicula) => {
-    if (pelicula.director=== director) {
+    if (pelicula.director === director) {
       return contador + 1;
     } else {
       return contador;
     }
   }, 0);
 
-  const percentage = (frecuencia*100)/(20)
-
+  const numPeliculas = arrayTotal.length
+  console.log (numPeliculas)
+  const percentage = (frecuencia * 100) / numPeliculas;
   return percentage;
-}
+};
