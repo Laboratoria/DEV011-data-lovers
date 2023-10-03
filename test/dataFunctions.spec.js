@@ -11,7 +11,7 @@ describe("filterData", () => {
 
 describe("computeStats", () => {
   it("Calcular el % de películas de cada direcor", () => {
-    const dataStats = computeStats("Hayao Miyazaki", fakeData, data);
+    const dataStats = computeStats("Hayao Miyazaki", fakeData, fakeData);
     expect(dataStats).toEqual(100);
   });
 });
