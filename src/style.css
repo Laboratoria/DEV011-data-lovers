@@ -125,8 +125,12 @@ h5 {
   display: flex;
   font-size: 150%;
   justify-content: center;
-  color: #c2d1d1;
+  color: #101111;
   font-style: oblique;
   font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: #e0c886;
+  margin-inline: 18%;
+  border-radius: 12px;
+  
    }
   
