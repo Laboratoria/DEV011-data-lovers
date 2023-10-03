@@ -1,6 +1,6 @@
 //Código que tenga que ver con mostrar los datos en la pantalla. Interacción del DOM. Llamas a las funciones de dataFunctions.js
 
-import { sortData, filterData } from "./dataFunctions.js";
+import { sortData, filterData, computeStats } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/ghibli/ghibli.js";
 
@@ -28,7 +28,18 @@ btnFiltrar.addEventListener("change", function () {
 
   const filteredFILMS = filterData(peliculas, "director", selectedValueF);
   root.innerHTML="";
-  root.appendChild(renderItems(filteredFILMS));
+  const tarjetas = root.appendChild(renderItems(filteredFILMS));
+//Función estadística
+  const directorBuscado = selectedValueF;
+  const frecuenciaDirector = computeStats(selectedValueF, filteredFILMS);
+
+  const elementoP = document.createElement("p");
+  elementoP.textContent = `Los films dirigidos por ${directorBuscado} representan el ${frecuenciaDirector} % del trabajo total del estudio`
+  root.insertBefore(elementoP,tarjetas);
+
+  console.log(`Los films dirigidos por "${directorBuscado}" representan el ${frecuenciaDirector} % del trabajo total del estudio`);
+
+
 });
 
 //Función para limpiar valores
@@ -42,3 +53,7 @@ btnClear.addEventListener("click", function () {
 });
 
 console.log(renderItems, data);
+
+
+
+
