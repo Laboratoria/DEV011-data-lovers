@@ -18,13 +18,6 @@
   <body>
     <main>
       <section class="barra-navegación">
-        <select data-testid="select-sort" name="release_date">
-          <option value="inicio" selected="true" disabled="disabled">
-            Sort by Year
-          </option>
-          <option value="asc">Ordenar fecha ascendente</option>
-          <option value="desc">Ordenar fecha descendente</option>
-        </select>
         <select data-testid="select-filter" name="director">
           <option value="inicio" selected="true" disabled="disabled">
             Filter by Director
@@ -36,12 +29,17 @@
           <option value="Gorō Miyazaki">Gorō Miyazaki</option>
           <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
         </select>
-        <button name="clearBtn">Clear 🗑 </button>
+        <select data-testid="select-sort" name="release_date">
+          <option value="inicio" selected="true" disabled="disabled">
+            Sort by Year
+          </option>
+          <option value="asc">Ordenar fecha ascendente</option>
+          <option value="desc">Ordenar fecha descendente</option>
+        </select>
+        <button name="clearBtn">Clear 🗑</button>
       </section>
-      
-      <div id="root" class="lista-imagenes">
-      
-      </div>
+
+      <div id="root" class="lista-imagenes"></div>
     </main>
     <footer>
       "2023 | Desarrollado por: Carolina Navarro e Itzel Quintana ©🌸"
