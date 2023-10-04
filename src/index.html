@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>Data Lovers</title>
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAExMUAAgICAAACP8A9/f3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAIkQiAAAAAAJEREQgAAAAJEREREIAAAJERERERCAAAkREREREIAAkREQiRERCACIiIkQiIiIAIzMzETMzMgACMzMzMzMgAAIzMzMzMyAAACMzMzMyAAAAAjMzMyAAAAAAIjMiAAAAAAAAIgAAAAAAAAAAAAAAD+fwAA+B8AAPAPAADgBwAAwAMAAMADAACAAQAAgAEAAIABAADAAwAAwAMAAOAHAADwDwAA+B8AAP5/AAD//wAA"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <header>
+      <img
+        src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex-t.png"
+        alt="logo"
+        class="logo"
+      />
+      <button class="abrir-menu" id="abrir">
+        <img
+          src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex.png"
+          alt="pokedex-i"
+          class="pokedex-imagen"
+        />
+      </button>
+      <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar">Cerrar</button>
+        <ul class="nav-list">
+          <li class="none">
+            <label for="filter-by"></label>
+            <select name="atri-pokemon" id="filter-by" data-testid="select-filter">
+
+              <option value="default" disabled selected>Tipo:</option>
+              <option value="all">Todos</option>
+              <option value="normal">Normal</option>
+              <option value="fire">Fire</option>
+              <option value="water">Water</option>
+              <option value="grass">Grass</option>
+              <option value="electric">Electric</option>
+              <option value="ice">Ice</option>
+              <option value="fighting">Fighting</option>
+              <option value="poison">Poison</option>
+              <option value="ground">Ground</option>
+              <option value="flying">Flying</option>
+              <option value="psychic">Psychic</option>
+              <option value="bug">Bug</option>
+              <option value="rock">Rock</option>
+              <option value="ghost">Ghost</option>
+              <option value="dark">Dark</option>
+              <option value="dragon">Dragon</option>
+              <option value="steel">Steel</option>
+              <option value="fairy">Fairy</option>
+            </select>
+          </li>
+          <li class="none">
+            <label for="select-sort"></label>
+            <select
+              name="atri-pokemon"
+              id="select-sort"
+              data-testid="select-sort"
+            >
+              <option value="default" disabled selected>Ordenar por: </option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+              <option value="asc">Nro asc</option>
+              <option value="desc">Nro desc</option>
+            </select>
+          </li>
+          <li class="none">
+            <button id="reset-button" data-testid="button-clear" type="button">
+              Limpiar
+            </button>
+          </li>
+          <li id="count-pokemon" class="caja" data-testid="count-pokemon">
+            Pokemones: 251
+          </li>
+        </ul>
+      </nav>
+      <h1></h1>
+    </header>
+    <main>
+      <div class="contenedor-c">
+        <section id="root">
+          <ul id="tarjetas">
+            <li itemscope itemtype="pokemon" class="none">
+              <dt>Número:</dt>
+              <dd itemprop="num"></dd>
+              <dt>Nombre:</dt>
+              <dd itemprop="name"></dd>
+              <dt>Tipo:</dt>
+              <dd itemprop="type"></dd>
+              <dt>Ataque básico:</dt>
+              <dd itemprop="base-attack"></dd>
+              <dt>Defensa base:</dt>
+              <dd itemprop="base-defense"></dd>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer class="contenedor-f">
+      By: Katherine Pino &amp; Isadora Vargas
+      <img
+        src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/612ce4761b9679000402af1c.png"
+        alt="pokemon-logo"
+        class="pokemon-footer"
+      />
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>

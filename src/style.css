@@ -1,0 +1,288 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #7AD8CD;
+  border:0.5rem solid #41b1a5;
+}
+
+.none{
+  text-decoration: none;
+}
+
+.logo{
+  max-width: 8rem;
+}
+
+.pokedex-imagen {
+  width: 8rem; 
+  height: auto; 
+  position: absolute;
+  top:1rem; 
+  right:5rem;
+}
+
+.nav-list{
+  list-style-type: none;
+  display: flex;
+  gap: 0.1rem;
+  
+}
+
+.nav-list li{
+  text-decoration: none;
+  color:#7AD8CD;
+}
+
+/*Esta clase debe estar en display none para que no se vea en desktop*/
+.abrir-menu,
+.cerrar-menu{
+  display: none;
+}
+
+.tarjetas{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.tarjetas li{
+  margin: 0.5rem; /* Espacio entre los elementos */
+  /* Borde opcional para resaltar cada elemento */
+}
+
+.tarjetas li div{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 10rem; /* Ajusta la altura según tus necesidades */
+}
+.card-side.back {
+  transform: rotateY(-180deg);
+  background-image: url('https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokebola-atras2.png');
+  background-size: cover;
+  /* background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%); */
+}
+.card-side.front {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/pkmngo-pokeball.png');
+  background-size: cover; 
+  /* background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+}
+
+dt{
+  font-family:'Saira', sans-serif;
+  font-size:1rem;
+  text-align: center;
+}
+dd{
+  font-family:'Saira', sans-serif;
+  font-size:1rem;
+  text-align: center;
+}
+dd[itemprop="name"] {
+  font-weight: bold;
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
+.card {
+  perspective: 150rem;
+  margin: 1rem auto;
+  height: 5rem;
+  width: 10rem;
+  max-width: 400px;
+  box-shadow: none;
+  background: none;
+}
+.card-side {
+  height: 10rem;
+  border-radius: 50%;/*para que quede redondo 50%*/
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color:#2F2E9A;
+  font-family:'Saira', sans-serif;
+}
+
+@media screen and (max-width:650px){
+  .abrir-menu,
+  .cerrar-menu{
+    display: block;
+  }
+
+  .nav{
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #449c3c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0, .5);
+  }
+  nav.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+  } 
+}
+
+.contenedor-c {
+  position: static;
+  width: 100%; /* Ancho igual al ancho de la ventana del navegador */
+  height: 80%; /* Altura igual a la altura de la ventana del navegador */
+  background-color: #ffffff; /* Color de fondo del rectángulo */
+  border:0.5rem solid #41b1a5;
+  overflow: auto; /* Evita que el rectángulo se desborde de la ventana */
+  font-family:'Saira', sans-serif;
+}
+.contenedor-f {
+  position: static;
+  width: 100%; /* Ancho igual al ancho de la ventana del navegador */
+  height: 8%; /* Altura igual a la altura de la ventana del navegador */
+  background-color: #90d55e; /* Color de fondo del rectángulo */
+  border:0.5rem solid #449c3c;
+  overflow: hidden; /* Evita que el rectángulo se desborde de la ventana */
+  color:#000000;
+  display: flex;
+  text-align:lefts;
+  align-items: center;
+  font-size:1rem;
+  font-family:'Saira', sans-serif;
+}
+.pokedex-tituloj {
+  width: 15rem; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción original */
+  position: absolute;
+  top:1rem; /* Coloca el elemento 50 píxeles desde la parte superior del elemento padre */
+  right:40rem;
+}
+
+.pokemon-footer {
+  width: 4rem; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción original */
+  position: absolute;
+  right:5rem;
+}
+#reset-button {
+  background-color: #FFCE31;
+  color: #2F2E9A;
+  border: 0.1rem solid #2F2E9A;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family:'Saira', sans-serif;
+  }
+#reset-button:hover {
+  background-color: #f87e68;
+  color: #000000;
+  border: 0.1rem solid #000000;
+} 
+
+#cerrar {
+  background-color: #FFCE31;
+  color: #2F2E9A;
+  border: 0.1rem solid #2F2E9A;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family:'Saira', sans-serif;
+  }
+#cerrar:hover {
+  background-color: #f87e68;
+  color: #000000;
+  border: 0.1rem solid #000000;
+} 
+
+#filter-by {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Saira', sans-serif;
+  color: #444;
+  line-height: 1.3em;
+  padding: .4em 1.4em .3em .8em;
+  width: 10.2rem;
+  max-width: 100%; 
+  box-sizing: border-box;
+  align-items: center;
+  border: 0.1rem solid #2F2E9A;
+  border-radius: .3em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+
+#select-sort {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Saira', sans-serif;
+  color: #444;
+  line-height: 1.3em;
+  padding: .4em 1.4em .3em .8em;
+  width: 10.2rem;
+  max-width: 100%; 
+  box-sizing: border-box;
+  align-items: center;
+  border: 0.1rem solid #2F2E9A;
+  border-radius: .3em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+
+#count-pokemon {
+  background-color: #FFCE31;
+  color: #2F2E9A;
+  border: 0.1rem solid #2F2E9A;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family:'Saira', sans-serif;
+}
