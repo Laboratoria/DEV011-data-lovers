@@ -11,23 +11,26 @@ export const renderItems = (data) => {
     const card = document.createElement("li");
     card.classList.add("card");
 
-    // Crear un elemento imagen y establecer su src y alt
     const image = document.createElement("img");
     image.src = item.poster;
     image.alt = item.title;
+    image.setAttribute("itemscope", ""); // Agregar el atributo itemscope
 
     // Crear un elemento título y establecer su contenido
     const title = document.createElement("h2");
     title.textContent = item.title;
     title.textContent = '"' + item.title + '",';
+    title.setAttribute("itemprop", "name"); // Agregar el atributo itemprop
 
-    //crear elemento de director
+    // Crear un elemento director y establecer su contenido
     const director = document.createElement("h3");
     director.textContent = item.director;
+    director.setAttribute("itemprop", "director"); // Agregar el atributo itemprop
 
     // Crear un elemento año de publicación y establecer su contenido
     const year = document.createElement("h4");
     year.textContent = item.release_date;
+    year.setAttribute("itemprop", "datePublished"); // Agregar el atributo itemprop
 
     // Añadir la imagen, título y año al elemento tarjeta
     card.appendChild(image);

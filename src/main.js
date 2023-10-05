@@ -65,7 +65,7 @@ btnFiltrar.addEventListener("change", function () {
   );
   console.log(frecuenciaDirector);
   const elementoP = document.createElement("h5");
-  elementoP.textContent = ` Los films dirigidos por ⭐ ${directorBuscado} ⭐ representan el ${frecuenciaDirector} % del trabajo total del estudio `;
+  elementoP.textContent = `⭐ ${directorBuscado} ⭐ directed the ${frecuenciaDirector} % from studio Ghibli `;
   root.insertBefore(elementoP, tarjetas);
 
   console.log(
