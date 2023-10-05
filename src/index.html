@@ -1,11 +1,130 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- inicio de header-->
+  <header>
+    <h1>Bienvenido a...</h1>
+    <img src="https://www.pngall.com/wp-content/uploads/5/Pokemon-Go-Logo-PNG-High-Quality-Image.png" id="imagen1"
+      alt="pokemon go">
+  </header>
+
+  <!--pantalla de ingresar nombre-->
+  <section class="contenedor-nombre">
+
+    <!-- <form id="formNombre" class="flex">
+      
+      <input type="text" id="nombre" required>
+      <button type="submit" id="inicio">Iniciar</button>
+    </form>-->
+
+  </section>
+
+
+  <!-- <section class="imagenCentral">
+    <img src="img/1poke.jpg" id="imagen" alt="pokemon go">
+  </section>-->
+
+  <!-- segunda pantalla  MAIN -->
+  <main>
+    <!-- <div class="contenedor-cards" style="display: none;">
+
+      <!- filter by type-->
+    <form>
+      <label for="filtro">filtro por tipo:</label>
+      <select id="filtro" data-testid="select-filter" name="type">
+        <option value=""></option>
+        <option value="normal">Normal</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="grass">Grass</option>
+        <option value="electric">Electric</option>
+        <option value="psychic">Psychic</option>
+        <option value="dark">Dark</option>
+        <option value="fairy">Fairy</option>
+        <option value="ice">Ice</option>
+        <option value="fighting">Fighting</option>
+        <option value="poison">Poison</option>
+        <option value="ground">Ground</option>
+        <option value="bug">Bug</option>
+        <option value="rock">Rock</option>
+        <option value="ghost">Ghost</option>
+        <option value="dragon">Dragon</option>
+        <option value="steel">Steel</option>
+      </select>
+
+      <!-- orden alfabetico -->
+      <label for="ordenletra">ordenar:</label>
+      <select id="ordenletra" data-testid="select-sort" name="name">
+        <option value=""></option>
+        <option value="asc">A - Z</option>
+        <option value="desc">Z - A</option>
+      </select>
+
+      <label for="calculoestadistico">datos promedio:</label>
+      <select id="calculoestadistico" data-testid="select-data" name="name">
+        <option value=""></option>
+        <option value="Mayor">Mayor defensa</option>
+        <option value="Menor">Menor defensa</option>
+      </select>
+
+      <label for="filtro-ataque">filtro por ataque base:</label>
+      <select id="filtro-ataque" data-testid="select-attack" name="attack">
+        <option value=""></option>
+        <option value="100">Más de 100</option>
+        <option value="150">Más de 150</option>
+        <option value="200">Más de 200</option>
+      </select>
+
+
+      <button type="button" id="Limpiar" data-testid="button-clear">Limpiar</button>
+      
+    </form>
+
+    <!--tarjetas-->
+    <section class="tarjetas-pokemon" id="root">
+      <nav>
+        <ul id="root1" style="display: none;"></ul>
+        <!-- <dl itemscope itemtype="pokemon" style="display: none;">
+          <dt>Name:</dt>
+          <dd itemprop="name">pikachu</dd>
+          <dt>Number:</dt>
+          <dd itemprop="num">025</dd>
+          <dt>Rarity:</dt>
+          <dd itemprop="pokemon-rarity">normal</dd>
+        </dl> -->
+      </nav>
+    </section>
+  </main>
+
+  <!--inicio de footer-->
+  <footer>
+    <article>
+      <article class="flex  footer-estilo ">
+        <img src="img/imagen3footer.jpg!d" id="footerlogo" alt="footerpokemon">
+        <h2 class="tamaño-letra"> Durante el combate observa tu mejor estrategia!</h2>
+      </article>
+    </article>
+
+    <!--informacion autor -->
+    <article>
+      <article class=" estilo-inferior">
+        <h3>The pokemon company</h3>
+        <p>Autor: Desarrolladoras Maria salcedo y Maria valdebenito</p>
+        <p>©2023 Pokémon. ©1995 - 2023 Nintendo/Creatures Inc./GAME FREAK inc. TM, ®Nintendo.</p>
+
+      </article>
+    </article>
+
+  </footer>
+  <script src="main.js" type="module"></script>
+
+</body>
+
 </html>

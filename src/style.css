@@ -1,0 +1,311 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "roboto mono",monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor-nombre {
+  text-align: center;
+}
+
+
+header {
+  background: linear-gradient(to right, #78bbeef4, #0052a3);
+  /* padding: 0;
+  display: flex;*/
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+#imagen1 {
+  display: inline;
+  max-width: 15%;
+  justify-content: center;
+}
+
+.contenedor-nombre {
+  background: linear-gradient(to right, #78bbeef4, #0052a3);
+  padding: 15px;
+  display: flex;
+  justify-content: right;
+}
+
+
+#inicio {
+  background-color: #f25850d4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#inicio:hover {
+  background-color: #e20984;
+  transform: translateX(5px);
+}
+
+#imagen {
+  width: 100%;
+
+}
+
+/* estilos de footer */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+.footer-estilo {
+  background-color: #000000;
+  height: 300px;
+  color: #FFFFFF;
+  justify-content: space-around;
+
+}
+
+.reversa-mediaquiry {
+  background-color: #fefefe;
+  color: #212529;
+  padding: 20px;
+  font-family: "roboto mono",monospace;
+  text-align: center;
+}
+
+.estilo-inferior h3 {
+  color: #007bff;
+  font-size: 24px;
+}
+
+.estilo-inferior p {
+  font-size: 16px;
+  text-align: center;
+}
+
+#footerlogo {
+  width: 200px;
+  height: auto;
+
+}
+
+/*  @keyframes  los estilos de la animación */
+@keyframes mover {
+  from {
+    margin-left: 0;
+
+  }
+
+  to {
+    margin-left: 70%;
+    /*movimiento de la letra*/
+  }
+
+  form {
+    display: inline-block;
+    background-color:#d3ddd6;
+    background-image: url(img/pokebolas.png);
+    padding: 10px;
+    font-size: 30px;
+
+  }
+}
+
+/* la velocidad del movimiento */
+h3 {
+  animation: mover 4s infinite;
+}
+
+/* segunda pantalla*/
+.contenedor-cards {
+  background: linear-gradient(to right, #78bbeef4, #0052a3);
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  background-color: #060606;
+  padding: 10px;
+  color: #fcfcfc;
+  font-family: "roboto mono",monospace;
+
+
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name,
+button {
+  margin-left: 600px;
+  margin-top: 0;
+}
+
+button {
+
+  color: white;
+  font-size: 16px;
+  background-color: green;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+
+}
+
+button {
+  transition: all 0.3s ease;
+  margin-left: 40px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 10px;
+    text-align: left;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .contenedor-cards {
+    display: none;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  #root1 {
+    display: block;
+    margin: 1px;
+    border: 1px;
+    padding: 1px;
+  }
+
+  #imagen {
+
+    max-width: 100%;
+    height: auto;
+
+
+
+  }
+}
+
+/* tarjeta */
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1px;
+  margin: 1px;
+  border: 1px;
+
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+  font-family: "roboto mono",monospace;
+  margin: 10px;
+  text-transform: uppercase;
+  width: 30%;
+  max-width: 250px;
+  text-align: left;
+  color: #080e13;
+  background-color: whitesmoke;
+  cursor: pointer;
+  padding: 1px;
+}
+
+pokenum {
+  display: flexbox;
+  background-color: #dce0e4b7;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  border: 1px dashed black;
+  margin: 2px;
+}
+
+n {
+  background-color: #adc2d8;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  border: 1px black;
+  margin: 2px;
+}
+
+t {
+  background-color: #adc2d8;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  border: 1px black;
+  margin: 2px;
+}
+
+t2 {
+  background-color: #adc2d8;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  border: 1px black;
+  margin: 2px;
+}
+
+img {
+  justify-content: left
+}
+
+/*estilo fondo*/
+body {
+  background-image: url(img/fondobacground.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+.tarjetaPokedex{
+background: linear-gradient(to right, #a9dea6f4, #b4fba9);
+transition: transform 0.3s; /* Agregamos una transición suave para suavizar el movimiento */
+}
+
+.tarjetaPokedex:hover {
+  transform: translateX(20px); /* Mueve la tarjeta 20px hacia la derecha cuando se coloca el cursor */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Cambiamos la sombra al pasar el cursor */
+  
+}
+
+select {
+  font-family: "roboto mono",monospace;
+  text-align: center;
+  
+}
