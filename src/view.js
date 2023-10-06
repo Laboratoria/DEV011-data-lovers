@@ -20,7 +20,7 @@ export const renderItems = (data) => {
     const title = document.createElement("h2");
     title.textContent = item.title;
     title.textContent = '"' + item.title + '",';
-    title.setAttribute("itemprop", "name"); // Agregar el atributo itemprop
+    title.setAttribute("itemprop", "title"); // Agregar el atributo itemprop
 
     // Crear un elemento director y establecer su contenido
     const director = document.createElement("h3");
@@ -30,7 +30,7 @@ export const renderItems = (data) => {
     // Crear un elemento año de publicación y establecer su contenido
     const year = document.createElement("h4");
     year.textContent = item.release_date;
-    year.setAttribute("itemprop", "datePublished"); // Agregar el atributo itemprop
+    year.setAttribute("itemprop", "release_date"); // Agregar el atributo itemprop
 
     // Añadir la imagen, título y año al elemento tarjeta
     card.appendChild(image);
