@@ -1,18 +1,31 @@
-import { example, anotherExample } from '../src/dataFunctions.js';
-import { data as fakeData } from './data.js';
+// import { example, anotherExample } from '../src/dataFunctions.js';
+import { filterData } from '../src/dataFunctions.js';
+import { data as fakeData, resultFilter } from './data.js';
 
-console.log(fakeData);
+// describe('example', () => {
 
-describe('example', () => {
+//   it('returns `example`', () => {
+//     expect(example()).toBe('example');
+//   });
+// });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+// describe('anotherExample', () => {
 
-describe('anotherExample', () => {
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+// });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+describe('array', ()=>{
+
+  it('verificar array', ()=>{
+    console.log(typeof fakeData);
+    expect( typeof fakeData).toBe("object")
+  })
+
+  it('filtro', ()=>{
+    const resultado = filterData(fakeData, 'type', 'water')
+    expect(resultado).toEqual(resultFilter)
+  })
+
+})
